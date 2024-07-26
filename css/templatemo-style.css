@@ -1,0 +1,825 @@
+/*
+==================================================
+CSS SITEMAP >>>>
+
+  01. GENERAL CSS
+  02. HEADER CSS
+  03. SOCIAL ICONS CSS
+  04. HOME BLOCK CSS
+  05. ABOUT BLOCK CSS
+  06. SKILLS BLOCK CSS
+  07. WORK BLOCK CSS
+  08. ACHIEVEMENTS BLOCK CSS
+  
+
+
+==================================================*/
+
+/*==============================================
+01. GENERAL CSS
+================================================*/
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font: 16px/1.6 'Raleway', Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+#video:after{
+  content: '';
+  opacity: 0.75;
+  background: #4096ee;
+  background: -moz-linear-gradient(top, #4096ee 0%, #39ced6 100%);
+  background: -webkit-linear-gradient(top, #4096ee 0%, #39ced6 100%);
+  background: linear-gradient(to bottom, #4096ee 0%, #39ced6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4096ee', endColorstr='#39ced6', GradientType=0);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode #video:after {
+  display: none;
+}
+
+.dark-mode-toggle {
+  background-color:rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+  outline: none;
+  z-index: 1;
+}
+
+.dark-mode-toggle .fa-sun {
+  color: gold;
+  display: inline-block;
+}
+
+.dark-mode-toggle .fa-moon {
+  color: white;
+  display: none;
+}
+
+.dark-mode-toggle.active .fa-sun {
+  display: none;
+}
+
+.dark-mode-toggle.active .fa-moon {
+  display: inline-block;
+}
+
+.dark-mode-toggle:focus {
+  outline: none;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+html {
+  -ms-overflow-style: scrollbar;
+}
+.alltrans,
+.social-icons li a,
+.owl-nav > button,
+.owl-nav > button:after,
+.counter-box,
+.about-img:after,
+.gallery-img img,
+.form-control,
+.owl-dot,
+.subscribe-row,
+.close-btn,
+.close-btn:before,
+.close-btn:after,
+.tag-btn,
+.btn {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #fff;
+  outline: none;
+  text-decoration: underline;
+}
+@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
+  a:active {
+    background-color: transparent;
+  }
+}
+p {
+  margin: 0 0 20px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin: 0 0 20px;
+  font-weight: 600;
+  text-transform:uppercase;
+}
+h1,
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+h4 {
+  font-size: 22px;
+  font-weight: 600;
+}
+h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+h6 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+#main {
+  padding: 0;
+  background: #fff;
+}
+.no-margin {
+  margin: 0 !important;
+}
+figure {
+  margin:0;
+}
+.opacity-no {
+  opacity: 1 !important;
+}
+
+.wrapper-background-dark:after {
+  background: #222;
+  opacity:0.95;
+}
+.section-inner {
+  padding:20px 30px 0;
+}
+.fp-scrollable {
+  height:calc(100vh - 200px) !important;
+}
+#fp-nav ul li a span {
+ display: none;
+}
+
+.btn {
+  background: #fff;
+  color: #222;
+  text-align:center;
+  line-height:52px;
+  padding:0 35px;
+  border-radius: 0px;
+  text-transform:uppercase;
+  font-weight:600;
+  border:2px solid transparent;
+  border-radius: 10px;
+}
+.btn:hover, .btn:focus {
+  color:#fff;
+  border-color:#fff;
+  background:none;
+}
+.btn:focus {
+  box-shadow:none;
+  outline:none;
+}
+.btn.btn-xs {
+  line-height:34px;
+  font-size:12px;
+  padding:0 20px;
+  font-weight: 500;
+}
+.btn.btn-outline {
+  background:none;
+  border-color:#fff;
+  color:#fff;
+  border-width:1px;
+}
+.btn.btn-outline:hover, .btn.btn-outline:focus {
+  background:#fff;
+  color:#222;
+}
+.btn.btn-dark {
+  color: #222;
+  border-color: #222;
+}
+.btn.btn-dark:hover, .btn.btn-dark:focus {
+  background: #222;
+  color: #fff;
+}
+.owl-carousel .owl-stage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.owl-carousel .owl-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex: 1 0 auto;
+}
+.preloader {
+  background: -moz-linear-gradient(top, #4096ee 0%, #39ced6 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #4096ee 0%,#39ced6 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #4096ee 0%,#39ced6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#39ced6',GradientType=0 ); /* IE6-9 */
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+  text-align: center;
+}
+.preloader-bounce {
+  left: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+}
+.preloader-bounce > span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0.3em;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-animation: bounce 0.6s infinite alternate;
+  animation: bounce 0.6s infinite alternate;
+  background: #fff;
+}
+.preloader-bounce > span:nth-child(2){
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  background: #fff;
+}
+.preloader-bounce > span:nth-child(3){
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  background: #fff;
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-1.2em);
+    transform: translateY(-1.2em);
+  }
+}
+
+@keyframes bounce {
+  from {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-1.2em);
+    transform: translateY(-1.2em);
+  }
+}
+
+#fullpage {
+  z-index: 99;
+}
+
+
+
+/*==============================================
+02. HEADER CSS
+================================================*/
+#header {
+  padding:20px 0;
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  z-index:999;
+}
+.container-fluid {
+  padding:0 20px;
+}
+a#logo {
+  text-decoration: none;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navbar {
+  padding: 0;
+}
+.navbar-toggle {
+  display:none;
+}
+.navbar-nav {
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+.navbar-nav li {
+  margin-left: 30px;
+}
+.navbar-nav li a {
+  color:#fff;
+  font-size: 15px;
+  text-decoration:none;
+  display:block;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.navbar-nav li a:after {
+  content:'';
+  display:block;
+  height: 2px;
+  background:#fff;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform:scale(0);
+  transform:scale(0);
+  margin-top: 4px;
+}
+.navbar-nav li a:hover:after, .navbar-nav li.active a:after{
+  -webkit-transform:scale(1);
+  transform:scale(1);
+}
+.navbar-nav li a:hover {
+  opacity: 1;
+}
+.navbar-nav li.active a {
+  opacity: 1;
+}
+.collapse:not(.show) {
+  display:block;
+}
+
+
+
+
+/*==============================================
+03. SOCIAL ICONS CSS
+================================================*/
+#social-icons {
+  padding:0;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right:0;
+  z-index: 199;
+}
+.social-icons {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.social-icons li {
+  display: block;
+  margin: 1px 0px;
+}
+.social-icons li a {
+  width:50px;
+  height:50px;
+  display:inline-block;
+  line-height:50px;
+  text-align:center;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255,255,255,1);
+  font-size:18px;
+}
+.social-icons li a:hover {
+  color:#1e1e1e;
+  background-color: #fff;
+}
+/*==============================================
+04. HOME BLOCK CSS
+================================================*/
+.welcome-box {
+  font-size:20px;
+  line-height:1.7;
+}
+.welcome-first{
+  font-size: 28px;
+  display: block;
+  /* text-transform: uppercase; */
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+.welcome-box p {
+  max-width: 620px;
+  width:100%;
+  margin:0 auto 30px;
+  color: #fff;
+}
+.welcome-title {
+  font-weight: 300;
+  font-size: 45px;
+  margin-bottom:7px;
+  letter-spacing:0.01em;
+}
+.welcome-title span {
+  font-size:25px;
+  display:block;
+  font-weight:270;
+  line-height:1.2;
+}
+
+.subheading {
+  font-size:17px;
+  display:block;
+  font-weight:350;
+}
+.welcome-box .btn {
+  margin-top: 10px;
+}
+.next-section {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.next-section span {
+  margin-top: 15px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 500;
+}
+.next-section i:hover {
+  opacity: 1;
+}
+
+.resume-button {  
+  display: inline-block;  
+  padding: 10px 20px;  
+  font-size: 16px;  
+  color: #fff;  
+  background-color: rgba(250, 250, 250, 0.25); 
+  border: none;  
+  border-radius: 5px; 
+  outline: none; 
+  text-decoration: none;
+  cursor: pointer; 
+}  
+
+.resume-button:hover {  
+  background-color: #fff;  
+  color: #000;
+}  
+.resume-button:focus {
+  outline: none; /* Ensures no outline on focus */
+  box-shadow: none; /* Removes any default box-shadow that might appear */
+}
+
+/*==============================================
+05. ABOUT ME
+================================================*/
+
+.about-section .row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* Adjustments for the image container */
+.about-img {
+  margin: 0 auto 30px;
+  position: relative;
+  width: 80%; /* Adjust width to fit the layout */
+}
+
+.about-img img {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px rgba(0,0,0,.3); /* Reduced shadow size */
+  box-shadow: 0 0 20px rgba(0,0,0,.3); /* Reduced shadow size */
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Adjust the column sizes */
+.col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+/* Adjustments for the card container */
+.container {
+  margin-top: 15px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,.3); /* Reduced shadow size */
+  background:  rgba(250, 250, 250, 0.25);
+  margin-bottom: 10px; /* Space between cards */
+  transition: background 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  width: 115%; /* Make card responsive */
+  max-width: 500px; /* Set maximum width */
+  height: 200px; /* Set fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text inside card */
+}
+
+.card .card-body {
+  padding: 16px;
+}
+
+.card .card-icon {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+.card:hover .card-icon {
+  color: #000; /* Black color for icon on hover */
+}
+
+.card .card-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.card .card-text {
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* Card hover effect */
+.card:hover {
+  background: #fff; /* White background on hover */
+  color: #000; /* Black text on hover */
+}
+
+/*==============================================
+06. SKILLS BLOCK CSS
+================================================*/
+.title-block {
+  margin-bottom: 40px;
+}
+
+.title-block span {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.services-list .item {
+  background-color: rgba(250, 250, 250, 0.25);
+  border-radius: 10px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  height: 100%; /* Set a fixed height for all items */
+  width: 100%; /* Set a fixed width for all items */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px; /* Adjust the margin to control spacing between items */
+}
+
+.service-icon {
+  display: block;
+  margin: 0 auto;
+  font-size: 64px;
+}
+
+.service-box {
+  font-size: 15px;
+  padding: 20px; /* Adjust padding as needed */
+  text-align: center; /* Center the text inside the service box */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.services-list .item:hover {
+  background-color: #fff;
+  color: #1e1e1e;
+}
+
+.service-box h3 {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.service-box p:last-child {
+  margin: 0;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+  border-radius: 3px;
+}
+
+.owl-dots {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: rgba(255, 255, 255, .2);
+}
+
+.owl-carousel .owl-dots .owl-dot:focus {
+  outline: none;
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+  background: #fff;
+}
+
+
+/*==============================================
+07. WORK BLOCK CSS
+================================================*/
+.gallery-section {
+  text-align: center;
+}
+
+.portfolio-item img {
+  max-width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  z-index: 9;
+  border-radius: 10px;
+}
+.portfolio-item .thumb-inner {
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  text-align: left;
+  padding: 20px;
+  background-color: rgba(250,250,250,0.25);
+  width: 100%;
+  height: 60px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.portfolio-item .thumb-inner h4 {
+  margin-bottom: 0;
+  color: #0c0c0c;
+  font-weight: 800;
+  font-size: 16px;
+  margin-top: 0px;
+}
+.portfolio-item .thumb-inner p {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  margin-bottom: 0px;
+}
+.portfolio-item:hover .thumb-inner p {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  color: #4a4a4a;
+  margin-top: 0;
+}
+.portfolio-item:hover .thumb-inner {
+  border-radius: 10px;
+  height: 100%;
+  background-color: rgba(250,250,250,0.9)
+}
+.portfolio-item:hover .thumb-inner h4 {
+   margin-top: 40px;
+  color: #1e1e1e;
+  margin-bottom: 20px;
+}
+
+
+
+/*==============================================
+09. ACHEIVEMENT BLOCK CSS
+================================================*/
+.achievement-item {
+  width: 100%;
+  margin: 10px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.achievement-item .thumb-inner {
+  background-color: rgba(250,250,250,0.25);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 150px;
+  width: 100%;
+}
+
+.achievement-item .icon-container {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.achievement-item h4{
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.achievement-item .hover-text {
+  display: none;
+  padding: 10px;
+}
+
+.achievement-item:hover .thumb-inner {
+  font-weight: 500;
+  color: #000;
+  background-color: #eee;
+  align-content: center;
+}
+
+.achievement-item:hover h4 {
+  display: none;
+}
+
+.achievement-item:hover .icon-container {
+  display: none; /* Hide the icon on hover */
+}
+.achievement-item:hover .subtext {
+  display: none; /* Hide the icon on hover */
+}
+.achievement-item:hover .hover-text {
+  display: block;
+}
+
+.medal-container .fas.fa-medal {  
+  font-size: 24px; /* Size of the medal icons */  
+  color:#FFD700; 
+  -webkit-text-stroke: 0.5px #c5a900; /* Outline effect for the medal icons */  
+  margin: 0 5px; /* Space between the medal icons and the text */  
+}
